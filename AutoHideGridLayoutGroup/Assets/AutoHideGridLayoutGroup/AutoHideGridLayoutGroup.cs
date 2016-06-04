@@ -75,9 +75,9 @@ namespace ThisisGame
         }
 
         /// <summary>
-        /// 动态添加，异步创建的时候，创建一个，调用一次Add;
+        /// 刷新
         /// </summary>
-        public void Add()
+        public void Refresh()
         {
             if (scrollRect != null)
             {
@@ -92,6 +92,22 @@ namespace ThisisGame
             childShowStatus.Clear();
 
             Init();
+        }
+
+        /// <summary>
+        /// 动态添加，异步创建的时候，创建一个，调用一次Add;
+        /// </summary>
+        public void Add()
+        {
+            Refresh();
+        }
+
+        /// <summary>
+        /// 动态删减
+        /// </summary>
+        public void Remove()
+        {
+            Refresh();
         }
 
         void ScrollCallback(Vector2 data)
