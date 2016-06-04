@@ -18,3 +18,7 @@ Unity SetActive 是没有内部判断的。
 所以在对一个GameObject 进行 SetActive 的时候，如果当前状态已经是目标状态，就请跳过。
 
 if(child.activeSelf ==  show) return;
+
+
+异步创建的支持，请查看 Tutorials/testAsync.cs
+
